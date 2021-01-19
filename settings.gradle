@@ -1,0 +1,6 @@
+rootProject.name = "library-items"
+
+include ':domain'
+include ':use-case'
+//include ':web-api'
+
