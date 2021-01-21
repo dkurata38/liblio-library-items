@@ -1,5 +1,6 @@
 package com.github.dkurata38.liblio.library_items.domain.book;
 
+import java.util.Objects;
 import java.util.Optional;
 
 /**
@@ -33,6 +34,12 @@ public class Book {
      */
     public Book(BookId bookId, Title title, Format format, Description description, Publisher publisher,
                 PublishedOn publishedOn, Language language, PageCount pageCount, Isbn13 isbn13) {
+        Objects.requireNonNull(bookId);
+        Objects.requireNonNull(title);
+        Objects.requireNonNull(format);
+        Objects.requireNonNull(description);
+        Objects.requireNonNull(language);
+        Objects.requireNonNull(pageCount);
         this.bookId = bookId;
         this.title = title;
         this.format = format;
